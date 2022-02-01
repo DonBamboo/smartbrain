@@ -138,7 +138,7 @@ const ParticlesOptions = {
       "width": 1,
       "warp": false
     },
-    /*DIRI LAST MAG WORK ANG PARTICLEs*/
+    /*DIRI LAST MAG WORK ANG PARTICLES try*/
     "move": {
       "angle": {
         "offset": 0,
