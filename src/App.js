@@ -138,7 +138,6 @@ const ParticlesOptions = {
       "width": 1,
       "warp": false
     },
-    /*DIRI LAST MAG WORK ANG PARTICLES test*/
     "move": {
       "angle": {
         "offset": 0,
@@ -162,36 +161,6 @@ const ParticlesOptions = {
         "enable": false,
         "inverse": false,
         "maxSpeed": 50
-      },
-      "path": {
-        "clamp": true,
-        "delay": {
-          "random": {
-            "enable": false,
-            "minimumValue": 0
-          },
-          "value": 0
-        },
-        "enable": false,
-        "options": {}
-      },
-      "outModes": {
-        "default": "out"
-      },
-      "random": false,
-      "size": false,
-      "speed": 2,
-      "spin": {
-        "acceleration": 0,
-        "enable": false
-      },
-      "straight": false,
-      "trail": {
-        "enable": false,
-        "length": 10,
-        "fillColor": {
-          "value": "#000000"
-        }
       },
       "vibrate": false,
       "warp": false
@@ -220,75 +189,7 @@ const ParticlesOptions = {
         "startValue": "random"
       }
     },
-    "orbit": {
-      "animation": {
-        "count": 0,
-        "enable": false,
-        "speed": 1,
-        "sync": false
-      },
-      "enable": false,
-      "opacity": 1,
-      "rotation": {
-        "random": {
-          "enable": false,
-          "minimumValue": 0
-        },
-        "value": 45
-      },
-      "width": 1
-    },
-    "reduceDuplicates": false,
-    "repulse": {
-      "random": {
-        "enable": false,
-        "minimumValue": 0
-      },
-      "value": 0,
-      "enabled": false,
-      "distance": 1,
-      "duration": 1,
-      "factor": 1,
-      "speed": 1
-    },
-    "roll": {
-      "darken": {
-        "enable": false,
-        "value": 0
-      },
-      "enable": false,
-      "enlighten": {
-        "enable": false,
-        "value": 0
-      },
-      "mode": "vertical",
-      "speed": 25
-    },
-    "rotate": {
-      "random": {
-        "enable": false,
-        "minimumValue": 0
-      },
-      "value": 0,
-      "animation": {
-        "enable": false,
-        "speed": 0,
-        "sync": false
-      },
-      "direction": "clockwise",
-      "path": false
-    },
-    "shadow": {
-      "blur": 0,
-      "color": {
-        "value": "#000000"
-      },
-      "enable": false,
-      "offset": {
-        "x": 0,
-        "y": 0
-      }
-    },
+
     "shape": {
       "options": {},
       "type": "circle"
@@ -308,35 +209,7 @@ const ParticlesOptions = {
         "startValue": "random"
       }
     },
-    "stroke": {
-      "width": 0
-    },
-    "tilt": {
-      "random": {
-        "enable": false,
-        "minimumValue": 0
-      },
-      "value": 0,
-      "animation": {
-        "enable": false,
-        "speed": 0,
-        "sync": false
-      },
-      "direction": "clockwise",
-      "enable": false
-    },
-    "twinkle": {
-      "lines": {
-        "enable": false,
-        "frequency": 0.05,
-        "opacity": 1
-      },
-      "particles": {
-        "enable": false,
-        "frequency": 0.05,
-        "opacity": 1
-      }
-    },
+
     "wobble": {
       "distance": 5,
       "enable": false,
