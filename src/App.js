@@ -16,15 +16,34 @@ import './App.css';
 // });
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor (props) {
+    super(props);
     this.state = {
       input: '',
       imageUrl: '',
       box: {},
       route: 'signin',
       isSignedIn: false,
+      user: {
+        id: '',
+        name: '',
+        email: '',
+        password: '',
+        entries: 0,
+        joined: ''
+      }
     }
+  }
+
+  loadUser = (data) => {
+    this.setState({ user: {
+      id: data.id,
+      name: data.name,
+      email: data.email,
+      password: data.password,
+      entries: data.entries,
+      joined: data.joined
+    }})
   }
 
   // componentDidMount() {
@@ -58,8 +77,8 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-    .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
-    .catch(err => console.log(err))
+      .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
+      .catch(err => console.log(err))
   }
 
   onRouteChange = (route) => {
@@ -92,7 +111,7 @@ class App extends Component {
         : (
             route === 'signin'
             ? <Signin onRouteChange={onRouteChange} />
-            : <Register onRouteChange={onRouteChange} />
+            : <Register loadUser={ this.loadUser } onRouteChange={onRouteChange} />
           )
         }
       </div>
