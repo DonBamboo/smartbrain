@@ -54,7 +54,7 @@ onSubmitSignIn = () => {
 				        	type="text" 
 				        	name="name"  
 				        	id="name" 
-				        	onChange = { this.onNameChange }
+				        	onChange = {this.onNameChange}
 				        />
 				      </div>
 				      <div className="mt3">
@@ -64,7 +64,7 @@ onSubmitSignIn = () => {
 				        	type="email" 
 				        	name="email-address"  
 				        	id="email-address"
-				        	onChange = { this.onEmailChange }
+				        	onChange = {this.onEmailChange}
 				        />
 				      </div>
 				      <div className="mv3">
@@ -74,7 +74,7 @@ onSubmitSignIn = () => {
 				        	type="password" 
 				        	name="password"  
 				        	id="password"
-				        	onChange = { this.onPasswordChange }
+				        	onChange = {this.onPasswordChange}
 				        />
 				      </div>
 				    </fieldset>

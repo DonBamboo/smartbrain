@@ -1,14 +1,14 @@
-import React from 'react';
+ import React from 'react';
 
-function Rank() {
+function Rank({ name, entries }) {
 	return(
 		<div>
 			<div className='white f3'>
-				{'Bamboo, your current rank is...'}
+				{`${name}, your current entry count is...`}
 			</div>
 			<div className='white f1'>
-				{'#3'}
-			</div>
+				{entries}
+			</div>`
 		</div>
 	);	
 }
