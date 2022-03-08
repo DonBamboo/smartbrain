@@ -8,7 +8,7 @@ function Rank({ name, entries }) {
 			</div>
 			<div className='white f1'>
 				{entries}
-			</div>`
+			</div>
 		</div>
 	);	
 }
