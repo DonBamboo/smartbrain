@@ -22,7 +22,7 @@ onPasswordChange = (event) => {
 
 
 onSubmitSignIn = () => {
-  fetch('http://localhost:5000/register', {
+  fetch('https://boiling-meadow-52705.herokuapp.com/register', {
     method: 'post',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
