@@ -2,7 +2,6 @@ import react, { Component } from 'react';
 import Navigation from './Components/Navigation/Navigation';
 import Signin from './Components/Signin/Signin';
 import Register from './Components/Register/Register';
-import Clarifai from 'clarifai';
 import Logo from './Components/Logo/Logo';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
@@ -11,29 +10,28 @@ import Particles from 'react-tsparticles';
 import { ParticlesOptions } from './Particles';
 import './App.css';
 
-// const app = new Clarifai.App({
-//  apiKey: 'eb7043bb40134831bc06b8aa534919b6'
-// });
+const initialState = {
+  input: '',
+  imageUrl: '',
+  box: {},
+  route: 'signin',
+  isSignedIn: false,
+  user: {
+    id: '',
+    name: '',
+    email: '',
+    password: '',
+    entries: 0,
+    joined: ''
+  }
+}
 
 class App extends Component {
   constructor (props) {
     super(props);
-    this.state = {
-      input: '',
-      imageUrl: '',
-      box: {},
-      route: 'signin',
-      isSignedIn: false,
-      user: {
-        id: '',
-        name: '',
-        email: '',
-        password: '',
-        entries: 0,
-        joined: ''
-      }
-    }
+    this.state = initialState;
   }
+
 
   loadUser = (data) => {
     this.setState({ user: {
@@ -102,7 +100,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'signout') {
-      this.setState({isSignedIn: false})
+      this.setState(initialState)
     } else if (route === 'home') {
       this.setState({isSignedIn: true})
     }
